@@ -1,0 +1,11 @@
+<form action="/restaurants/{{restaurant.id}}/edit-restaurant" method="POST">
+    <div>
+        <label>Change restaurant name</label>
+        <input name="name" value="{{restaurant.name}}" required />
+    </div>
+    <div>
+        <label>Change restaurant image</label>
+        <input name="image" value="{{restaurant.image}}" type="url" required />
+    </div>
+    <button style="margin-top: 40px;">Update Restaurant</button>
+</form>

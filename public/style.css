@@ -1,0 +1,450 @@
+.header { 
+  grid-area: header;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  text-align: center;
+}
+
+.logo {
+  margin-top: 10px;
+  width: 200px;
+  height: auto;
+  padding: 1rem;
+}
+
+nav {
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+  padding: 2rem;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: lightblue;
+}
+
+.menu-cards { 
+  grid-area: main;
+  text-align: center;
+  padding: 2rem 2rem 2rem 2rem;
+  font-size: 20px;
+}
+
+.page-name {
+  grid-area: title;
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  max-width: auto;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.restaurant-cards {
+  grid-area: main;
+  max-width: auto;
+  gap: 1rem;
+}
+
+.res-title {
+  color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: center;
+}
+.res-title:hover{;
+  font-size: 50px;
+}
+
+.photo {
+  grid-area: photo;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin: 3rem;
+}
+
+.restaurant-form {
+  font-size: 20px;
+}
+
+.admin {
+  grid-area: right;
+}
+
+div.back-to-top {
+  position: sticky;
+  text-align: center;
+  bottom: 10px;
+  color: black;
+  background-color: lightblue;
+  padding: 20px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+div.back-to-top a {
+  color: black;
+  text-decoration: none;
+}
+
+div.back-to-top a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'photo photo photo photo'
+    'photo photo photo photo'
+    'title title title title'
+    'main main main main'
+    'footer footer footer footer';
+  grid-gap: 10px;
+  padding: 10px;
+  font-family: 'Amatic SC', cursive;
+}
+
+.grid-container-res {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main photo photo'
+    'main main main main photo photo'
+    'main main main main photo photo'
+    'main main main main photo photo'
+    'main main main main photo photo'
+    'main main main main right right';
+  grid-gap: 10px;
+  padding: 10px;
+  font-family: 'Amatic SC', cursive;
+}
+
+@media screen and (min-width: 20rem){
+  section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: none;
+  }
+}
+
+@media screen and (min-width: 30rem){
+  section {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 60rem){
+  section {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (min-width: 80rem){
+  section {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*
+div.add-new {
+  position: sticky;
+  bottom: 10px;
+  float: left;
+  color: black;
+  font-family: 'Amatic SC', cursive;
+  background-color: lightblue;
+  padding: 20px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+div.add-new a {
+  color: black;
+  text-decoration: none;
+}
+
+div.add-new a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+
+
+dl div{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  max-width: 300px;
+}
+#line-1 {
+  background-color: black;
+  width: 100%;
+  height: 2px;
+  margin-top: 5px;
+}
+
+
+
+.restaurant-form2 {
+  margin-top: 3rem;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  padding-left: 200px;
+}
+Floating Back-To-Top Button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*This is the card styling.
+img.card-image {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
+.card-styling {
+  color: lightslategray;
+  font-family: 'Parisienne', cursive;
+  text-decoration: none;
+  font-size: 20px;
+  border: solid 1px lightslategray;
+  text-align: center;
+  min-height: 125px;
+}
+
+h3 {
+  font-size: 14px;
+}*/
+
+  /*img {
+    max-width: 100%;
+    height: auto;
+  }*/
+  /*This is the sytling for the logo/header
+  header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #website-logo {
+    width: 300px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+  }
+  #line-1 {
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    margin-top: 5px;
+  }
+  #line-2 {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+  }
+  #line-3 {
+    background-color: #e6e6e6;
+    height: 2px;
+    margin: 50px 30px 50px 30px;
+  }
+  #line-4 {
+    background-color: #e6e6e6;
+    height: 2px;
+    margin: 50px 30px 20px 30px;
+  }
+  /*This is the styling for the nav bar
+  .nav-box {
+    padding-top: 20px;
+  }
+  /*This is the styling for the nav bar text
+  .nav-text a {
+    color: black;
+    font-family: "Roboto Slab";
+    padding: 0px 30px 0px 30px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .align-center {
+    text-align: center;
+  }
+  .nav-text a:hover {
+    color: white;
+    background-color: #e6e6e6;
+    font-family: "Roboto Slab";
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  /*This is the styling for the Simon bar
+  .bio-wrapper {
+     height: auto;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     color: black;
+     font-family: "Roboto Slab";
+     text-decoration: none;
+     font-size: 17px;
+   }
+   .bio-wrapper a {
+      color: grey;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .bio-wrapper a:hover {
+       background-color: #e6e6e6;
+     }
+  #bio-box-1 {
+    width: 60%;
+    margin: 0px 0px 0px 30px;
+  }
+  #bio-box-2 {
+    width: 40%;
+    margin: 0px 30px 0px 30px;
+    }
+  #simon-photo {
+    width: 200px;
+    float: right;
+    vertical-align: middle;
+    padding-right: 120px;
+  }
+
+  /*This is the styling for the about bars
+  .bio-wrapper2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    text-align: justify;
+    color: black;
+    font-family: "Roboto Slab";
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .bio-wrapper2 a {
+     color: grey;
+     text-decoration: none;
+     font-weight: 700;
+   }
+   .bio-wrapper2 a:hover {
+      background-color: #e6e6e6;
+    }
+ #bio-box-3 {
+   width: 50%;
+   margin: 10px 30px 30px 30px;
+ }
+ #bio-box-4 {
+   width: 50%;
+   margin: 10px 30px 30px 30px;
+   }
+
+/*This is the sytling for the contact text
+#contact-box-1 {
+    color: black;
+    font-family: "Roboto Slab";
+    text-align: center;
+    font-size: 40px;
+    padding: 30px 50px 30px 50px;
+  }
+  #contact-box-2 {
+    color: black;
+    font-family: "Roboto Slab";
+    text-align: center;
+    font-size: 25px;
+    padding: 30px 50px 200px 50px;
+  }
+  #contact-box-2 a {
+    color: black;
+    font-family: "Roboto Slab";
+    text-decoration: none;
+    font-weight: 600;
+  }
+  #contact-box-2 a:hover {
+    color: #e6e6e6;
+    font-family: "Roboto Slab";
+    text-decoration: none;
+  }
+  #button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+  }
+  /*This is the sytling for the contact buttons
+  button {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    font-family: "Roboto Slab";
+    padding: 10px 50px 10px 50px;
+  }
+
+  /*This is the sytling for the footer
+  footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    color: black;
+    font-family: "Roboto Slab";
+    text-decoration: none;
+    font-size: 5px;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  footer img  {
+    width: 30px;
+    padding: 0px 10px 0px 10px;
+  }
+  footer a {
+     text-decoration: none;
+     font-size: 12px;
+     color: black;
+   }
+  #footer-box-1 {
+    width: 25%;
+    height: 50%;
+  }
+  #footer-box-1 a:hover {
+      background-color: #e6e6e6;
+      padding: 10px 10px 10px 10px;
+    }
+  #footer-box-2 {
+    width: 50%;
+    height: 50%;
+    }
+  #footer-box-3 {
+    width: 25%;
+    height: 50%;
+    } */

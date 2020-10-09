@@ -1,0 +1,48 @@
+<body>
+    <div class="grid-container-res">
+        <div class="header">
+            <img class="logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/1/11/The_Table_%28restaurant%29_logo.png" />
+            <nav>
+                <a href="/" style="padding: 0px 30px 0px 30px">Home</a>
+                <a href="/restaurants" style="padding: 0px 30px 0px 30px">Restaurants</a>
+                <a href="/contact.html" style="padding: 0px 30px 0px 30px">Contact</a>
+            </nav>
+        </div>
+
+        <div class="menu-cards">
+            <section>
+                {{#each menus}}
+                <article>
+                    <h2 style="font-size: 40px;">{{this.title}}</h2>
+                    <dl>
+                        {{#each this.items}}
+                        <dt>{{this.name}}</dt>
+                        <dl>£{{this.price}}</dl>
+                        {{/each}}
+                    </dl>
+                </article>
+                {{/each}}
+            </section>
+        </div>
+        <div class="photo" style="background-image: url({{restaurant.image}}); background-size: cover;">
+            <h1>{{restaurant.name}}</h1>
+        </div>
+        <div class="admin">
+            <h3 style="text-align: center;">Admin Panel</h3>
+            <p>Would you like to delete this restaurant?</p>
+            <a href="/restaurants/{{restaurant.id}}/delete">Delete</a>
+            <p>Would you like to edit this restaurant?</p>
+            <a href="/restaurants/{{restaurant.id}}/edit-restaurant">Edit</a>
+        </div>
+        <form class="restaurant-form" action="/restaurants" method="POST" style="text-align: center;">
+            <h2>Add a new Menu</h2>
+            <div>
+                <label style="padding-right: 30px;">Menu Title</label>
+                <input title="title" placeholder="e.g. Brunch Menu" required />
+            </div>
+            <button style="margin-top: 40px;">Add Menu</button>
+        </form>
+    </div>
+
+</body>

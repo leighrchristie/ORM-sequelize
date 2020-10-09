@@ -1,0 +1,45 @@
+<a name="top"></a>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <img class="logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/1/11/The_Table_%28restaurant%29_logo.png" />
+            <nav>
+                <a href="/" style="padding: 0px 30px 0px 30px">Home</a>
+                <a href="/restaurants" style="padding: 0px 30px 0px 30px">Restaurants</a>
+                <a href="/contact.html" style="padding: 0px 30px 0px 30px">Contact</a>
+            </nav>
+        </div>
+        <div class="photo">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                style="width:100%" />
+        </div>
+        <h1 class="page-name">Our Restaurants</h1>
+        <section class="restaurant-cards">
+            {{#each restaurants}}
+            <a href="/restaurant/{{this.id}}" style="text-decoration: none;">
+                <article>
+                    <div style="background-image: url({{this.image}}); height: 250px; background-size: cover;">
+                        <h2 class="res-title">{{this.name}}</h2>
+                    </div>
+                </article>
+            </a>
+            {{/each}}
+            <form class="restaurant-form" action="/restaurants" method="POST" style="text-align: center;">
+                <h2>Add a new Restaurant</h2>
+                <div>
+                    <label style="padding-right: 30px;">Restaurant name</label>
+                    <input name="name" placeholder="e.g. The King's Head" required />
+                </div>
+                <div>
+                    <label style="padding-right: 28px;">Restaurant image</label>
+                    <input name="image" placeholder="restaurantimage.com/this-url" type="url" required />
+                </div>
+                <button style="margin-top: 40px;">Add Restaurant</button>
+            </form>
+        </section>
+        <div class="back-to-top"><a href="#top">Jump to top!</a></div>
+</body>
+
+</div>

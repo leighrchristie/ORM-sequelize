@@ -1,4 +1,4 @@
-const {Restaurant, sequelize, Menu} = require('./model')
+const {Restaurant, sequelize, Menu, Item} = require('./model')
 
 beforeAll(async () => {
     await sequelize.sync()
@@ -16,5 +16,12 @@ describe('Restaurant', () => {
         await restaurant.addMenu(menu)
         const menus = await restaurant.getMenus()
         expect(menus.length).toBe(1)
+    })
+    test('can add a item to a menu', async () => {
+        const menu = await Menu.create({title: "Weekend Brunch"})
+        const item = await Item.create({name: "Eggs Benedict"})
+        await menu.addItem(item)
+        const items = await menu.getItems()
+        expect(items.length).toBe(1)
     })
 })
